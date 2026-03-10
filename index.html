@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Karakoram Systems | Modern Mobile Development</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Karakoram Systems | Peak Mobile Development</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://files.oaiusercontent.com/file-7B67Z8x8L8X6Z8X8L8X6Z8X8">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -16,196 +20,104 @@
                     colors: {
                         "primary": "#ec7f13",
                         "background-light": "#f7f5f8",
-                        "background-dark": "#191022",
+                        "background-dark": "#0f172a",
                     },
                     fontFamily: {
                         "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    }
                 },
             },
         }
     </script>
-<style>
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<!-- Top Navigation Bar -->
-<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<img alt="Karakoram Systems Logo" class="size-10 rounded-lg object-cover" data-alt="Cropped brand icon for Karakoram Systems" src="data:image/png;base64,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"/>
-<h2 class="text-xl font-black tracking-tight text-slate-900 dark:text-white">Karakoram Systems</h2>
-</div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#portfolio">Portfolio</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
-</nav>
-<div class="flex items-center gap-4">
-<a class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 inline-block" href="mailto:karakoramsystems@gmail.com">Get a Quote</a>
-</div>
-</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <!-- Circularly Cropped Icon -->
+            <img alt="Karakoram Logo" class="size-10 rounded-full object-cover shadow-sm border border-primary/20" src="https://files.oaiusercontent.com/file-7B67Z8x8L8X6Z8X8L8X6Z8X8"/>
+            <h2 class="text-xl font-black tracking-tight">Karakoram Systems</h2>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+            <a class="hover:text-primary transition-colors" href="#services">Services</a>
+            <a class="hover:text-primary transition-colors" href="mailto:karakoramsystems@gmail.com?subject=Portfolio%20Inquiry">Portfolio</a>
+            <a class="hover:text-primary transition-colors" href="mailto:karakoramsystems@gmail.com?subject=Inquiry%20about%20Process">Our Process</a>
+        </nav>
+
+        <div class="flex items-center">
+            <a class="bg-primary hover:bg-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20" 
+               href="mailto:karakoramsystems@gmail.com?subject=Quote%20Request%20-%20Karakoram%20Systems">
+                Get a Quote
+            </a>
+        </div>
+    </div>
 </header>
+
 <main>
-<!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="parallax-bg w-full h-full opacity-40 dark:opacity-20" data-alt="Modern workspace with high-end mobile devices and laptops" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIMWfRRUGlZG5LNNapwWMp1JkknDvgGOB9CDUYSeZel48N7E7iUa6QOo08KXn1P-hZuzy04dCZZ14pualw93KWF9Kcw7VYOZ8fXgC9GicDkwp7W2A6jgkOPvezOF5A8rcFej_y82F_Px8KGwBAbYGZtsYSzb7y9EmJTxOcVWyqMl3RZ_DTZxnbA0jK_37nHg0n2OBddzgkxgaCtrXwG5hpZ_w1GlHTY7MnH-2gdkA_bsqdKsvgBqe9TRPia5OGw_7zX-cahF1-qPu1');">
-</div>
-<div class="absolute inset-0 bg-gradient-to-b from-background-light via-transparent to-background-light dark:from-background-dark dark:to-background-dark"></div>
-</div>
-<div class="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
-<div class="flex flex-col gap-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
-<span class="material-symbols-outlined text-sm">rocket_launch</span>
-                        Next-Gen Mobile Solutions
-                    </div>
-<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-                        Looking for <span class="text-primary">Mobile</span> Developers?
-                    </h1>
-<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-                        We build custom apps for businesses of all sizes. Fast delivery, competitive pricing, exceptional quality.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-base font-bold transition-all transform hover:scale-105 shadow-xl shadow-primary/25 inline-block text-center" href="mailto:karakoramsystems@gmail.com">Get Started</a>
-<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl text-base font-bold transition-all hover:bg-slate-50 dark:hover:bg-slate-700">
-                            View Portfolio
-                        </button>
-</div>
-</div>
-<div class="hidden lg:block relative">
-<div class="relative z-20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 rotate-3 hover:rotate-0 transition-transform duration-500">
-<img alt="App interface design" class="w-full h-auto" data-alt="Close up of a premium smartphone showing a modern app interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrYBKan8GgJ03ua-tZXNGsjVDiDOwzwB4R5ldFrgnhT1achLBrvtiqOI5GL4YFjAU5fCajwsDLjrU8YDP5fpFFyRlFBGP5Xs3-2EK0i126tOcchCOb0HMB3fUBpO5zKDAvRyKJIUnSV_z6ZwJJ41yUNmvRmZJfDR7adNVpdzTnmHGEXoq2WajFmTXH0NB35VsBImq5MW1KCuEIubB8Bfpq_sV-0ltZfLMjUEotcUOK92-y9WuPSQ3z-G9ptWmTZWuhbSbSf14hCk97"/>
-</div>
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 blur-3xl rounded-full z-10"></div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="py-24 bg-white dark:bg-slate-900/50" id="services">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col items-center text-center mb-16 gap-4">
-<h2 class="text-primary font-bold tracking-widest uppercase text-sm">Our Masterpiece</h2>
-<h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">Check out our featured project</h3>
-<div class="h-1.5 w-24 bg-primary rounded-full"></div>
-<p class="text-slate-600 dark:text-slate-400 max-w-2xl text-lg mt-4">
-                        Delivering sophisticated mobile solutions tailored to your business needs with modern architecture and seamless UX.
-                    </p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="col-span-full group p-8 md:p-12 rounded-2xl bg-background-light dark:bg-background-dark border border-primary/10 hover:border-primary/40 transition-all hover:shadow-2xl flex flex-col md:flex-row gap-12 items-center">
-<div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg">
-<img alt="Featured App Preview" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrYBKan8GgJ03ua-tZXNGsjVDiDOwzwB4R5ldFrgnhT1achLBrvtiqOI5GL4YFjAU5fCajwsDLjrU8YDP5fpFFyRlFBGP5Xs3-2EK0i126tOcchCOb0HMB3fUBpO5zKDAvRyKJIUnSV_z6ZwJJ41yUNmvRmZJfDR7adNVpdzTnmHGEXoq2WajFmTXH0NB35VsBImq5MW1KCuEIubB8Bfpq_sV-0ltZfLMjUEotcUOK92-y9WuPSQ3z-G9ptWmTZWuhbSbSf14hCk97"/>
-</div>
-<div class="w-full md:w-1/2 flex flex-col gap-6">
-<h4 class="text-3xl font-bold text-slate-900 dark:text-white">The Ultimate Mobile Experience</h4>
-<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-            Our premier application combines cutting-edge AI integration with a seamless, intuitive user interface. Designed for performance and built for scalability, it represents the pinnacle of our mobile development expertise.
-        </p>
-<ul class="flex flex-col gap-3">
-<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-                High-Performance Core Architecture
-            </li>
-<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-                Elegant &amp; Responsive UI Design
-            </li>
-<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-                Secure Data Encryption
-            </li>
-</ul>
-<div class="pt-4">
-<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
-                Learn more about this project <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Image Break with Parallax -->
-<section class="h-[400px] relative overflow-hidden">
-<div class="parallax-bg absolute inset-0 w-full h-full" data-alt="Modern tech team collaborating in a bright office space" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDj8erOum2pX840e-m-QH7hzAgTNizXV-H7NjN-niE2tYCQ6MDg84c1Jdtz3drDvUE_FskpJwaZFVdvQF_hAHpAARTeDtLJ8adplbWKNcX_G-8ALNMO3hTeBKpMJV6LNdIatbeHPYeXmiZjV09Cmj_fDNt92fIedKWd8P9AMDkPLEaAU7HYy7I6_qgP_YGFo2nh498cyXnvuPYd5ASdvr4XFv2cotICsVIs8YE1Jk7ddU9SASXc_4qeXg3k2tEKs96xgdQPst6T-0vT');">
-</div>
-<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
-<div class="relative z-10 h-full flex items-center justify-center text-center px-6">
-<h2 class="text-3xl md:text-5xl font-black text-white max-w-3xl drop-shadow-lg">
-                    Transforming ideas into digital reality.
-                </h2>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-24 bg-primary text-white">
-<div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-8">
-<h2 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">
-                    Ready to build something exceptional?
-                </h2>
-<p class="text-lg md:text-xl opacity-90 max-w-2xl leading-relaxed">
-                    Join dozens of successful startups and enterprises that trust Karakoram Systems for their mission-critical mobile applications.
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col gap-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-sm">mountain_flag</span>
+                    Next-Gen Mobile Solutions
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black leading-tight">
+                    Looking for <span class="text-primary">Mobile</span> Developers?
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+                    We build custom apps for businesses of all sizes. Fast delivery, competitive pricing, exceptional quality.
                 </p>
-<div class="flex flex-col sm:flex-row gap-4 mt-4">
-<a class="bg-white text-primary hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-bold transition-all shadow-xl inline-block" href="mailto:karakoramsystems@gmail.com">Get a Free Quote</a>
-<a class="bg-primary-dark/20 border border-white/30 hover:bg-white/10 px-10 py-4 rounded-xl text-lg font-bold transition-all inline-block" href="mailto:karakoramsystems@gmail.com">Schedule a Call</a>
-</div>
-</div>
-</section>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <a class="bg-primary hover:scale-105 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-xl shadow-primary/25" 
+                       href="mailto:karakoramsystems@gmail.com?subject=New%20Project%20Start">Get Started</a>
+                    
+                    <a class="border border-slate-300 dark:border-slate-700 px-8 py-4 rounded-xl text-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all" 
+                       href="mailto:karakoramsystems@gmail.com?subject=Schedule%20a%20Call">Schedule a Call</a>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img alt="App Design" class="rounded-3xl shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrYBKan8GgJ03ua-tZXNGsjVDiDOwzwB4R5ldFrgnhT1achLBrvtiqOI5GL4YFjAU5fCajwsDLjrU8YDP5fpFFyRlFBGP5Xs3-2EK0i126tOcchCOb0HMB3fUBpO5zKDAvRyKJIUnSV_z6ZwJJ41yUNmvRmZJfDR7adNVpdzTnmHGEXoq2WajFmTXH0NB35VsBImq5MW1KCuEIubB8Bfpq_sV-0ltZfLMjUEotcUOK92-y9WuPSQ3z-G9ptWmTZWuhbSbSf14hCk97"/>
+            </div>
+        </div>
+    </section>
 </main>
+
 <!-- Footer -->
-<footer class="bg-background-light dark:bg-background-dark pt-20 pb-10 border-t border-primary/10">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-<div class="col-span-1 md:col-span-2 flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<img alt="Karakoram Systems Logo" class="size-8 rounded object-cover" data-alt="Brand logo icon footer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvg_ifrEHcPwnqbkSJ2fspA4mBdwCfy2q9qV6575gEmgm3xgRZs6MlJHAlVwqQdVX0uLgDQzcfGdBiUfn4dqjMfZDe2tGM6LSrbSKiafVtcX4qoDosRnfRbdn0lucpIYuGbXhc1X3f7YLzXb7sr7qOZfVAeeJGBGFCqxuUtx1_qfNUAa83_EETfPPEoiiseJ4Iw3cgql_YHyst_wQu4EB8jL0p5YZEHMr0ba0tZKd5Il2upD4z30zpghgHBEu_zlBB6mdZ_eTvc1_"/>
-<span class="text-xl font-black tracking-tight">Karakoram Systems</span>
-</div>
-<p class="text-slate-600 dark:text-slate-400 max-w-sm">
-                    A premier mobile development agency dedicated to building high-performance iOS and Android applications for global brands.
-                </p>
-<div class="flex flex-col gap-2">
-<span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Contact Us</span>
-<a class="text-lg font-semibold text-primary hover:underline transition-all" href="mailto:karakoramsystems@gmail.com">
-                        karakoramsystems@gmail.com
-                    </a>
-</div>
-</div>
-<div>
-<h5 class="font-black mb-6 text-sm uppercase tracking-widest text-slate-500">Links</h5>
-<ul class="flex flex-col gap-4 text-slate-600 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Our Process</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
-</ul>
-</div>
-<div>
-<h5 class="font-black mb-6 text-sm uppercase tracking-widest text-slate-500">Legal</h5>
-<ul class="flex flex-col gap-4 text-slate-600 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 border-t border-primary/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="text-slate-500 text-sm">
-                © 2024 Karakoram Systems. All rights reserved.
-            </p>
-<div class="flex gap-6 text-slate-400">
-<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
-<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">contact_support</span></a>
-</div>
-</div>
+<footer class="bg-white dark:bg-slate-950 pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+            <div class="max-w-xs">
+                <div class="flex items-center gap-2 mb-4">
+                    <!-- Circular Icon in Footer -->
+                    <img alt="Logo" class="size-8 rounded-full object-cover" src="https://files.oaiusercontent.com/file-7B67Z8x8L8X6Z8X8L8X6Z8X8"/>
+                    <span class="font-black text-lg">Karakoram Systems</span>
+                </div>
+                <p class="text-sm text-slate-500">A premier mobile development agency building high-performance iOS and Android applications.</p>
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Contact</span>
+                <a class="text-lg font-semibold text-primary hover:underline" href="mailto:karakoramsystems@gmail.com">
+                    karakoramsystems@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-slate-100 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-400">
+            <p>© 2026 Karakoram Systems. All rights reserved.</p>
+            <div class="flex gap-6 uppercase font-bold tracking-tighter">
+                <a href="mailto:karakoramsystems@gmail.com?subject=Privacy%20Policy%20Inquiry" class="hover:text-primary">Privacy</a>
+                <a href="mailto:karakoramsystems@gmail.com?subject=Terms%20Inquiry" class="hover:text-primary">Terms</a>
+                <a href="mailto:karakoramsystems@gmail.com?subject=Cookie%20Policy%20Inquiry" class="hover:text-primary">Cookies</a>
+            </div>
+        </div>
+    </div>
 </footer>
-</body></html>
+
+</body>
+</html>
